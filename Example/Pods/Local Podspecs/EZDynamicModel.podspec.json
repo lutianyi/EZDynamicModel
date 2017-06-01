@@ -1,0 +1,22 @@
+{
+  "name": "EZDynamicModel",
+  "version": "0.1.0",
+  "summary": "A short description of EZDynamicModel.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Ezer/EZDynamicModel",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ezer": "lutianyi@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/Ezer/EZDynamicModel.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EZDynamicModel/Classes/**/*"
+}

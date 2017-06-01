@@ -1,0 +1,16 @@
+PODS:
+  - EZDynamicModel (0.1.0)
+
+DEPENDENCIES:
+  - EZDynamicModel (from `../`)
+
+EXTERNAL SOURCES:
+  EZDynamicModel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EZDynamicModel: 44ff986a7e4fb36c800c90098d79b93cbdbb178d
+
+PODFILE CHECKSUM: 2362bff2465e6bbaa308f6bfb105c4eb357ace46
+
+COCOAPODS: 1.2.1
