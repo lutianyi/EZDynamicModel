@@ -22,7 +22,7 @@ pod "EZDynamicModel"
 
 ## Author
 
-Ezer, lutianyi@users.noreply.github.com
+Ezer, g.tianyi.lu@gmail.com
 
 ## License
 
