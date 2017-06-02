@@ -10,9 +10,4 @@
 
 @implementation EZPerson
 
-- (NSString *)description {
-    
-    return [super description];
-}
-
 @end
