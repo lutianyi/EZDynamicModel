@@ -1,11 +1,8 @@
 use_frameworks!
 
 target 'EZDynamicModel_Example' do
-  pod 'EZDynamicModel', :path => '../'
 
-  target 'EZDynamicModel_Tests' do
-    inherit! :search_paths
+  platform :ios, ‘8.0’
+  pod 'EZDynamicModel'
 
-    
-  end
 end

@@ -2,15 +2,11 @@ PODS:
   - EZDynamicModel (0.1.0)
 
 DEPENDENCIES:
-  - EZDynamicModel (from `../`)
-
-EXTERNAL SOURCES:
-  EZDynamicModel:
-    :path: "../"
+  - EZDynamicModel
 
 SPEC CHECKSUMS:
-  EZDynamicModel: 44ff986a7e4fb36c800c90098d79b93cbdbb178d
+  EZDynamicModel: 03c1c6325d3cb8b2f3be0c35b07a440e7e2a2f5b
 
-PODFILE CHECKSUM: 2362bff2465e6bbaa308f6bfb105c4eb357ace46
+PODFILE CHECKSUM: 7da9b0ae65f14bb3538190da2bf1d49dc80389de
 
 COCOAPODS: 1.2.1

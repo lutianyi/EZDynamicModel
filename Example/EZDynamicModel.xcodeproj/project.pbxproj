@@ -24,7 +24,6 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9DABD7B31EDFFC6D0071342B /* EZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DABD7B21EDFFC6D0071342B /* EZPerson.m */; };
 		AC49CFD674B50343696BC16F /* Pods_EZDynamicModel_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A57BC2E06E713CFD025C96 /* Pods_EZDynamicModel_Example.framework */; };
-		EFFC7B70C55DEE32970147A5 /* Pods_EZDynamicModel_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325416A43B5C99D668DAA8CB /* Pods_EZDynamicModel_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		0A003F4FD43F30E9899BBD16 /* Pods-EZDynamicModel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZDynamicModel_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZDynamicModel_Example/Pods-EZDynamicModel_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1334F24A44A17DAFEC571F73 /* EZDynamicModel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EZDynamicModel.podspec; path = ../EZDynamicModel.podspec; sourceTree = "<group>"; };
-		183843EE5482906B60AE6230 /* Pods-EZDynamicModel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZDynamicModel_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZDynamicModel_Tests/Pods-EZDynamicModel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		325416A43B5C99D668DAA8CB /* Pods_EZDynamicModel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZDynamicModel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE12C3B0CD8535CA5BE72F5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* EZDynamicModel_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZDynamicModel_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +66,6 @@
 		9DABD7B11EDFFC6D0071342B /* EZPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPerson.h; sourceTree = "<group>"; };
 		9DABD7B21EDFFC6D0071342B /* EZPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPerson.m; sourceTree = "<group>"; };
 		C5A57BC2E06E713CFD025C96 /* Pods_EZDynamicModel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZDynamicModel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4EC7D332E456ADEE6B59A2C /* Pods-EZDynamicModel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZDynamicModel_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZDynamicModel_Tests/Pods-EZDynamicModel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FE3D9D4F579A07F42EA694D2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +88,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				EFFC7B70C55DEE32970147A5 /* Pods_EZDynamicModel_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +99,6 @@
 			children = (
 				9919FB8C3F4A47BF148B1D5A /* Pods-EZDynamicModel_Example.debug.xcconfig */,
 				0A003F4FD43F30E9899BBD16 /* Pods-EZDynamicModel_Example.release.xcconfig */,
-				183843EE5482906B60AE6230 /* Pods-EZDynamicModel_Tests.debug.xcconfig */,
-				D4EC7D332E456ADEE6B59A2C /* Pods-EZDynamicModel_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -228,12 +222,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "EZDynamicModel_Tests" */;
 			buildPhases = (
-				ABCBC5DC7A27CD6B905BC77A /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				3C01BB5FE47E1CFFA374B9EF /* [CP] Embed Pods Frameworks */,
-				734D7C4F3D9D3E44792AAEFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,21 +308,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EZDynamicModel_Example/Pods-EZDynamicModel_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3C01BB5FE47E1CFFA374B9EF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EZDynamicModel_Tests/Pods-EZDynamicModel_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6B149C3B6BA035511B814ED4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,36 +321,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EZDynamicModel_Example/Pods-EZDynamicModel_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		734D7C4F3D9D3E44792AAEFF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EZDynamicModel_Tests/Pods-EZDynamicModel_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ABCBC5DC7A27CD6B905BC77A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		ECC15701B05F14622BFA1CFD /* [CP] Check Pods Manifest.lock */ = {
@@ -530,12 +476,15 @@
 			baseConfigurationReference = 9919FB8C3F4A47BF148B1D5A /* Pods-EZDynamicModel_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZDynamicModel/EZDynamicModel-Prefix.pch";
 				INFOPLIST_FILE = "EZDynamicModel/EZDynamicModel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -545,19 +494,21 @@
 			baseConfigurationReference = 0A003F4FD43F30E9899BBD16 /* Pods-EZDynamicModel_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZDynamicModel/EZDynamicModel-Prefix.pch";
 				INFOPLIST_FILE = "EZDynamicModel/EZDynamicModel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 183843EE5482906B60AE6230 /* Pods-EZDynamicModel_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -581,7 +532,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4EC7D332E456ADEE6B59A2C /* Pods-EZDynamicModel_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

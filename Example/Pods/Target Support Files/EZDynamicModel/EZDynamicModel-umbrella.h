@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "EZModel.h"
 
 FOUNDATION_EXPORT double EZDynamicModelVersionNumber;
 FOUNDATION_EXPORT const unsigned char EZDynamicModelVersionString[];
