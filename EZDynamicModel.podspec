@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EZDynamicModel'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Create a model of dynamic properties.'
 
 # This description is used to generate tags and improve search results.
