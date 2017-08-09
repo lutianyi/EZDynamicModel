@@ -28,12 +28,22 @@
     
     id model = [self new];
     
-    [dictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        
-        [model setValue:obj forKey:key];
-    }];
+    [model assignWithDictionary:dictionary];
     
     return model;
+}
+
+- (void)assignWithDictionary:(NSDictionary *)dictionary {
+    
+    [dictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        
+        [self setValue:obj forKey:key];
+    }];
+}
+
+- (void)assignWithOtherModel:(id)model {
+    
+    [self assignWithDictionary:[self getAllPropertysWithModel:model]];
 }
 
 - (id)valueForKey:(NSString *)key {
@@ -58,7 +68,7 @@
             
             if (class_addProperty(self.class, [key UTF8String], attrs, 3)) {
                 
-                NSString * _key = [NSString stringWithFormat:@"%@", key];
+                NSString * _key = [NSString stringWithFormat:@"_%@", key];
                 
                 IMP objectGetter = imp_implementationWithBlock(^ id (id blockSelf){
                     
@@ -77,19 +87,17 @@
         
         SEL setterMethod = NSSelectorFromString([NSString stringWithFormat:@"set%@:", [key capitalizedString]]);
         
-        ((void(*)(id, SEL, id, NSString *))objc_msgSend)(self, setterMethod, value, key);
+        ((void(*)(id, SEL, id))objc_msgSend)(self, setterMethod, value);
     }
 }
 
-- (NSString *)description {
+- (NSDictionary *)getAllPropertysWithModel:(id)model {
+    
+    NSMutableDictionary * modelDic = @{}.mutableCopy;
     
     unsigned int outCount;
     
-    NSMutableString * description = @"<".mutableCopy;
-    
-    [description appendFormat:@"%@: %p;\n", NSStringFromClass(self.class), self];
-    
-    objc_property_t * propertyList = class_copyPropertyList(self.class, &outCount);
+    objc_property_t * propertyList = class_copyPropertyList([model class], &outCount);
     
     for (int i = 0; i < outCount; i++) {
         
@@ -97,7 +105,31 @@
         
         NSString * objectName = [[NSString alloc] initWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
         
-        [description appendFormat:@"\t%@: %@;\n", objectName, [self valueForKey:objectName]];
+        [modelDic setValue:[model valueForKey:objectName] forKey:objectName];
+    }
+    
+    free(propertyList);
+    
+    return modelDic.copy;
+}
+
+- (NSDictionary *)getAllPropertys {
+    
+    return [self getAllPropertysWithModel:self];
+}
+
+- (NSString *)description {
+    
+    NSMutableString * description = @"<".mutableCopy;
+    
+    [description appendFormat:@"%@: %p;\n", NSStringFromClass(self.class), self];
+    
+    NSDictionary * dic = [self getAllPropertys];
+    
+    for (NSString * key in dic) {
+        
+        [description appendFormat:@"\t%@: %@;\n", key, [self valueForKey:key]];
+        
     }
     
     [description appendString:@">\n"];

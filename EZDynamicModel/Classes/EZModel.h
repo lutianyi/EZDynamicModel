@@ -26,6 +26,21 @@
  */
 + (nonnull instancetype)modelWithDictionary:(nonnull NSDictionary *)dictionary;
 
+
+/**
+ 使用字典为模型赋值
+ 
+ @param dictionary 要赋值的字典
+ */
+- (void)assignWithDictionary:(nonnull NSDictionary *)dictionary;
+
+/**
+ 使用另一个模型赋值
+ 
+ @param model 其他模型
+ */
+- (void)assignWithOtherModel:(nonnull id)model;
+
 /**
  使用属性名取出对应的值
  
@@ -41,5 +56,13 @@
  @param key 属性名
  */
 - (void)setValue:(nullable id)value forKey:(NSString * _Nonnull)key;
+
+
+/**
+ 获取所有的属性
+ 
+ @return 以字典的形式返回所有已创建的属性和值
+ */
+- (nullable NSDictionary *)getAllPropertys;
 
 @end

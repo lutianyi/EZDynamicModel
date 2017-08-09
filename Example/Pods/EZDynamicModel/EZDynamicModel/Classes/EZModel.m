@@ -50,7 +50,7 @@
         if (!class_getProperty(self.class, [key UTF8String])) {
             
             objc_property_attribute_t type = { "T", [[NSString stringWithFormat:@"@\"%@\""/* e.g. @"NSString" */, NSStringFromClass([value class])] UTF8String] }; // T = type
-            objc_property_attribute_t ownershipOne = { "C", "" }; // C = copy
+            objc_property_attribute_t ownershipOne = { "R", "" }; // C = copy
             objc_property_attribute_t ownershipTwo = { "N", "" }; // N = nonatomic
             objc_property_attribute_t backingivar  = { "V", [[NSString stringWithFormat:@"%@", key] UTF8String] };
             
